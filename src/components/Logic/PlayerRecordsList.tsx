@@ -1,4 +1,3 @@
-// src/components/Logic/PlayerRecordsList.tsx
 import React from 'react'
 import { getPlayerRecords } from './localStorageUtils.tsx'
 

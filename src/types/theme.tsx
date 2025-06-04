@@ -1,6 +1,6 @@
-export type ThemeMode = 'light' | 'dark';
+export type ThemeMode = 'light' | 'dark'
 
 export interface ThemeContextProps {
-    themeMode: ThemeMode;
-    toggleTheme: () => void;
+    themeMode: ThemeMode
+    toggleTheme: () => void
 }

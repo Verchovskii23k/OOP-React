@@ -1,6 +1,6 @@
-import React, { useContext } from 'react';
-import { ThemeContext } from '../../context/ThemeContextDefinitions.tsx';
-import { useTheme } from '@mui/material/styles';
+import React, { useContext } from 'react'
+import { ThemeContext } from '../../context/ThemeContextDefinitions.tsx'
+import { useTheme } from '@mui/material/styles'
 import {
     Typography,
     List,
@@ -8,15 +8,15 @@ import {
     ListItemText,
     Button,
     Box,
-} from '@mui/material';
+} from '@mui/material'
 
 interface RulesScreenProps {
-    navigateToScreen: (screen: string) => void;
+    navigateToScreen: (screen: string) => void
 }
 
 const RulesScreen: React.FC<RulesScreenProps> = ({ navigateToScreen }) => {
-    const { toggleTheme, themeMode } = useContext(ThemeContext);
-    const theme = useTheme();
+    const { toggleTheme, themeMode } = useContext(ThemeContext)
+    const theme = useTheme()
 
     return (
         <Box sx={{ width: '100%', maxWidth: '1200px', minWidth: '600px', height: 'auto',
@@ -58,7 +58,7 @@ const RulesScreen: React.FC<RulesScreenProps> = ({ navigateToScreen }) => {
                 Перейти к регистрации
             </Button>
         </Box>
-    );
-};
+    )
+}
 
-export default RulesScreen;
+export default RulesScreen

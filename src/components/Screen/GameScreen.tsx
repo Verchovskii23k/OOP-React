@@ -1,30 +1,30 @@
-import React, { useContext, useState } from 'react';
-import { ThemeContext } from '../../context/ThemeContextDefinitions.tsx';
-import { GameState } from '../../../src/types/types.ts';
-import Timer from './Components_GS/Timer.tsx';
-import WordInput from './Components_GS/WordInput.tsx';
-import CurrentPlayer from './Components_GS/CurrentPlayer.tsx';
-import { useTheme } from '@mui/material/styles';
-import { Box, Typography, Button, Grid, List, Collapse, ListItemButton } from '@mui/material';
-import ListItem from '@mui/material/ListItem';
-import ListItemText from '@mui/material/ListItemText';
-import ExpandLess from '@mui/icons-material/ExpandLess';
-import ExpandMore from '@mui/icons-material/ExpandMore';
-import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import React, { useContext, useState } from 'react'
+import { ThemeContext } from '../../context/ThemeContextDefinitions.tsx'
+import { GameState } from '../../../src/types/types.ts'
+import Timer from './Components_GS/Timer.tsx'
+import WordInput from './Components_GS/WordInput.tsx'
+import CurrentPlayer from './Components_GS/CurrentPlayer.tsx'
+import { useTheme } from '@mui/material/styles'
+import { Box, Typography, Button, Grid, List, Collapse, ListItemButton } from '@mui/material'
+import ListItem from '@mui/material/ListItem'
+import ListItemText from '@mui/material/ListItemText'
+import ExpandLess from '@mui/icons-material/ExpandLess'
+import ExpandMore from '@mui/icons-material/ExpandMore'
+import AccountCircleIcon from '@mui/icons-material/AccountCircle'
 
 interface GameScreenProps {
-    gameState: GameState;
-    submitWord: () => void;
-    endTurn: () => void;
-    handleCurrentWordChange: (word: string) => void;
+    gameState: GameState
+    submitWord: () => void
+    endTurn: () => void
+    handleCurrentWordChange: (word: string) => void
 }
 
 const GameScreen: React.FC<GameScreenProps> = ({ gameState, submitWord, endTurn, handleCurrentWordChange }) => {
-    const { toggleTheme, themeMode } = useContext(ThemeContext);
-    const currentPlayer = gameState.players[gameState.currentPlayerIndex];
-    const [openPlayer1, setOpenPlayer1] = useState(false);
-    const [openPlayer2, setOpenPlayer2] = useState(false);
-    const theme = useTheme();
+    const { toggleTheme, themeMode } = useContext(ThemeContext)
+    const currentPlayer = gameState.players[gameState.currentPlayerIndex]
+    const [openPlayer1, setOpenPlayer1] = useState(false)
+    const [openPlayer2, setOpenPlayer2] = useState(false)
+    const theme = useTheme()
 
     return (
         <Box sx={{
@@ -121,7 +121,7 @@ const GameScreen: React.FC<GameScreenProps> = ({ gameState, submitWord, endTurn,
                 </Button>
             </Box>
         </Box>
-    );
-};
+    )
+}
 
-export default GameScreen;
+export default GameScreen

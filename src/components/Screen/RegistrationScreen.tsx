@@ -1,32 +1,32 @@
-import React, { useContext } from 'react';
-import { ThemeContext } from '../../context/ThemeContextDefinitions.tsx';
-import { Player } from '../../types/types.ts';
-import { useTheme } from '@mui/material/styles';
+import React, { useContext } from 'react'
+import { ThemeContext } from '../../context/ThemeContextDefinitions.tsx'
+import { Player } from '../../types/types.ts'
+import { useTheme } from '@mui/material/styles'
 import {
     Typography,
     TextField,
     Button,
     Box,
     Grid,
-} from '@mui/material';
+} from '@mui/material'
 
 interface RegistrationScreenProps {
-    players: Player[];
-    handlePlayerNameChange: (playerId: number, name: string) => void;
-    startGame: () => void;
+    players: Player[]
+    handlePlayerNameChange: (playerId: number, name: string) => void
+    startGame: () => void
 }
 
 const RegistrationScreen: React.FC<RegistrationScreenProps> = ({ players, handlePlayerNameChange, startGame }) => {
-    const { toggleTheme, themeMode } = useContext(ThemeContext);
-    const theme = useTheme();
+    const { toggleTheme, themeMode } = useContext(ThemeContext)
+    const theme = useTheme()
 
     const handleStartGame = () => {
         if (players.every(p => p.name && p.name.trim() !== '')) {
-            startGame();
+            startGame()
         } else {
-            alert('Пожалуйста, введите имена игроков.');
+            alert('Пожалуйста, введите имена игроков.')
         }
-    };
+    }
 
     return (
         <Box sx={{
@@ -82,7 +82,7 @@ const RegistrationScreen: React.FC<RegistrationScreenProps> = ({ players, handle
                 Начать игру
             </Button>
         </Box>
-    );
-};
+    )
+}
 
-export default RegistrationScreen;
+export default RegistrationScreen
