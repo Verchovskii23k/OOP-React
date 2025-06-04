@@ -1,4 +1,3 @@
-// src/components/Screen/Components_GS/WordInput.tsx
 import React from 'react'
 import { TextField, useTheme } from '@mui/material'
 interface WordInputProps {

@@ -5,7 +5,6 @@ export type Player = {
   words: string[]
 }
 
-
 export type GameScreen = 'rules' | 'registration' | 'game' | 'results'
 
 export type GameState = {

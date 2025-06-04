@@ -2,7 +2,7 @@ import React, { useState, useMemo, ReactNode, useEffect, useCallback } from 'rea
 import { ThemeProvider } from '@mui/material/styles'
 import { ThemeMode } from '../types/theme.tsx'
 import { lightTheme, darkTheme } from '../theme/themes.tsx'
-import { ThemeContext, ThemeContextProps } from './ThemeContextDefinitions.tsx' // Import ThemeContext
+import { ThemeContext, ThemeContextProps } from './ThemeContextDefinitions.tsx'
 interface Props {
     children: ReactNode
 }
